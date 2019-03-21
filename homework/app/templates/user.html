@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User: {{ user.username }}</h1>
+    <hr>
+    {% for task in tasks %}
+    <p>
+      {% include '_task.html' %}
+    </p>
+    {% endfor %}
+    {% if user == current_user %}
+      <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+    {% endif %}
+{% endblock %}

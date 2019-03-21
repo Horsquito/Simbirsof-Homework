@@ -1,0 +1,10 @@
+<table>
+    <tr valign="top">
+        <td>
+            <a href="{{ url_for('user', username=task.performer.username) }}">
+                {{ task.performer.username }}
+            </a>
+            perform:<br>Заголовок:{{ task.title }}<br>Описание:{{ task.body }}<br>Статус:{{ task.status }}
+        </td>
+    </tr>
+</table>
